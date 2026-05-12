@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 export default function PrivacyPolicy({ onBack }: { onBack: () => void }) {
     // Automatically scroll to top when the page loads
