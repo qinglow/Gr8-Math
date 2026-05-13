@@ -17,7 +17,7 @@ const ScrollReveal = ({ children }: { children: React.ReactNode }) => {
       (entries) => {
         entries.forEach((entry) => setIsVisible(entry.isIntersecting));
       },
-      { threshold: 0.15 } 
+      { threshold: 0.15 }
     );
     if (domRef.current) observer.observe(domRef.current);
     return () => { if (domRef.current) observer.unobserve(domRef.current); };
@@ -40,10 +40,10 @@ const FloatingPixels = () => {
       id: i,
       left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
-      size: `${Math.floor(Math.random() * 25) + 15}px`, 
+      size: `${Math.floor(Math.random() * 25) + 15}px`,
       color: colors[Math.floor(Math.random() * colors.length)],
-      delay: `${Math.random() * 5}s`, 
-      duration: `${Math.random() * 5 + 6}s` 
+      delay: `${Math.random() * 5}s`,
+      duration: `${Math.random() * 5 + 6}s`
     }));
     setPixels(newPixels);
   }, []);
@@ -52,9 +52,9 @@ const FloatingPixels = () => {
     <div className="floating-pixels-container">
       {pixels.map((p) => (
         <div key={p.id} className="floating-pixel" style={{
-            left: p.left, top: p.top, width: p.size, height: p.size,
-            backgroundColor: p.color, animationDelay: p.delay, animationDuration: p.duration
-          }}
+          left: p.left, top: p.top, width: p.size, height: p.size,
+          backgroundColor: p.color, animationDelay: p.delay, animationDuration: p.duration
+        }}
         />
       ))}
     </div>
@@ -71,18 +71,18 @@ const HomeContent = () => (
           <p className="description">
             Download the official Gr8 Math Learning Management System mobile app. Access your daily lesson logs, take assessments, and track your progress right from your Android device.
           </p>
-          
+
           {/* CTA BUTTONS WITH OFFICIAL LOGOS */}
           <div className="cta-buttons">
-            
+
             {/* ANDROID APK BUTTON */}
-            <a href="Gr8Math.apk" download="Gr8Math.apk" className="download-btn">
+            <a href="/Gr8Math.apk" download="Gr8Math_App.apk" className="download-btn">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1521-.5676.416.416 0 0 0-.5676.1521l-2.0223 3.503C15.5902 8.2561 13.8533 7.85 12 7.85s-3.5902.4061-5.1367 1.1006L4.841 5.4474a.416.416 0 0 0-.5676-.1521.416.416 0 0 0-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1521-.5676.416.416 0 0 0-.5676.1521l-2.0223 3.503C15.5902 8.2561 13.8533 7.85 12 7.85s-3.5902.4061-5.1367 1.1006L4.841 5.4474a.416.416 0 0 0-.5676-.1521.416.416 0 0 0-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396" />
               </svg>
               ANDROID APK
             </a>
-            
+
             {/* WEB APP BUTTON */}
             <a href="https://gr8math-webapp.onrender.com" target="_blank" rel="noopener noreferrer" className="web-app-btn">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -105,10 +105,10 @@ const HomeContent = () => (
         <div className="hero-mockup-wrapper">
           <div className="phone-mockup">
             <div className="phone-screen" style={{ padding: 0 }}>
-              <img 
-                src={previewImg} 
-                alt="Gr8 Math App Preview" 
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+              <img
+                src={previewImg}
+                alt="Gr8 Math App Preview"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
           </div>
@@ -187,11 +187,11 @@ export default function App() {
   return (
     <div className="app-container">
       <FloatingPixels />
-      
+
       <header className="gr8-header">
         <div className="gr8-header-left">
-            <img src={logoImg} alt="Gr8Math Logo" style={{ width: '36px', height: '36px', objectFit: 'contain' }} />
-            <span className="gr8-header-title">Gr8 Math App</span>
+          <img src={logoImg} alt="Gr8Math Logo" style={{ width: '36px', height: '36px', objectFit: 'contain' }} />
+          <span className="gr8-header-title">Gr8 Math App</span>
         </div>
 
         <nav className="gr8-nav">
@@ -202,15 +202,15 @@ export default function App() {
             Full Features
           </button>
         </nav>
-        
+
         <div style={{ position: 'absolute', top: 0, right: 0, height: '100%', width: '240px', zIndex: 0, opacity: 0.95 }}>
-            <div style={{ position: 'absolute', top: 0, right: 0, width: '120px', height: '20px', backgroundColor: '#1E4B95', boxShadow: '-3px 0 6px rgba(0,0,0,0.15)' }}></div>
-            <div style={{ position: 'absolute', top: 0, right: '0px', width: '20px', height: '20px', backgroundColor: '#EFBD31' }}></div>
-            <div style={{ position: 'absolute', top: '20px', right: 0, width: '140px', height: '20px', backgroundColor: '#1E4B95', boxShadow: '-3px 0 6px rgba(0,0,0,0.15)' }}></div>
-            <div style={{ position: 'absolute', top: '20px', right: '60px', width: '20px', height: '20px', backgroundColor: '#EFBD31' }}></div>
-            <div style={{ position: 'absolute', top: '40px', right: 0, width: '160px', height: '20px', backgroundColor: '#1E4B95', boxShadow: '-3px 0 6px rgba(0,0,0,0.15)' }}></div>
-            <div style={{ position: 'absolute', top: '40px', right: '40px', width: '20px', height: '20px', backgroundColor: '#EFBD31' }}></div>
-            <div style={{ position: 'absolute', top: '40px', right: '100px', width: '20px', height: '20px', backgroundColor: '#EFBD31' }}></div>
+          <div style={{ position: 'absolute', top: 0, right: 0, width: '120px', height: '20px', backgroundColor: '#1E4B95', boxShadow: '-3px 0 6px rgba(0,0,0,0.15)' }}></div>
+          <div style={{ position: 'absolute', top: 0, right: '0px', width: '20px', height: '20px', backgroundColor: '#EFBD31' }}></div>
+          <div style={{ position: 'absolute', top: '20px', right: 0, width: '140px', height: '20px', backgroundColor: '#1E4B95', boxShadow: '-3px 0 6px rgba(0,0,0,0.15)' }}></div>
+          <div style={{ position: 'absolute', top: '20px', right: '60px', width: '20px', height: '20px', backgroundColor: '#EFBD31' }}></div>
+          <div style={{ position: 'absolute', top: '40px', right: 0, width: '160px', height: '20px', backgroundColor: '#1E4B95', boxShadow: '-3px 0 6px rgba(0,0,0,0.15)' }}></div>
+          <div style={{ position: 'absolute', top: '40px', right: '40px', width: '20px', height: '20px', backgroundColor: '#EFBD31' }}></div>
+          <div style={{ position: 'absolute', top: '40px', right: '100px', width: '20px', height: '20px', backgroundColor: '#EFBD31' }}></div>
         </div>
       </header>
 
